@@ -1,21 +1,13 @@
-#include <iostream>
 #include "lib.h"
+#include <iostream>
 using namespace std;
+float max(const float A[], int dimensione) {
+    float massimo = A[0];
 
-
-float funzione( ) {
-    int i,n;
-    float   max;
-    cin>>n;
-    float array[n];
-    for (i = 0; i < n; i++) {
-        cin >> array[i];
+    for (int i = 1; i < dimensione; i++) {
+       if(A[i]>massimo) {
+           massimo=A[i];
+       }
     }
-    max = array[0];
-
-    for (i = 0; i < n; i++) {
-        if (array[i] > max) {
-            max = array[i];
-        }
-    }
-    return max;
+    return massimo;
+}
